@@ -1,5 +1,4 @@
-import 'package:flutter/cupertino.dart';
-import 'package:flutter/material.dart';
+import '../../../shared/exports.dart';
 
 class TopWidget extends StatelessWidget {
   const TopWidget({super.key});
@@ -11,7 +10,7 @@ class TopWidget extends StatelessWidget {
     return Container(
       padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 12),
       height: height * 0.18,
-      color: Colors.white,
+      color: Palette.white,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [

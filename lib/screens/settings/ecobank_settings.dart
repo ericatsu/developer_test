@@ -1,5 +1,5 @@
-import 'package:flutter/src/widgets/framework.dart';
-import 'package:flutter/src/widgets/placeholder.dart';
+
+import '../../shared/exports.dart';
 
 class EcobankSettings extends StatelessWidget {
   const EcobankSettings({super.key});
