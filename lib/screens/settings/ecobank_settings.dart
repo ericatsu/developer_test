@@ -276,7 +276,6 @@ class _EcobankSettingsState extends State<EcobankSettings> {
             ),
           ],
         ),
-        bottomNavigationBar: NavPage(),
       ),
     );
   }

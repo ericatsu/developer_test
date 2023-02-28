@@ -1,4 +1,3 @@
-import 'package:developer_test/shared/exports.dart';
 import 'package:flutter/material.dart';
 
 class ScreenFour extends StatelessWidget {
@@ -13,8 +12,6 @@ class ScreenFour extends StatelessWidget {
         height: height,
         width: width,
         color: Colors.pink,
-      ),
-      bottomNavigationBar: NavPage(
       ),
     );
   }

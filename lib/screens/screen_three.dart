@@ -1,4 +1,3 @@
-import 'package:developer_test/screens/nav_page.dart';
 import 'package:flutter/material.dart';
 
 class ScreenThree extends StatelessWidget {
@@ -13,8 +12,6 @@ class ScreenThree extends StatelessWidget {
         height: height,
         width: width,
         color: Colors.amber,
-      ),
-      bottomNavigationBar: NavPage(
       ),
     );
   }

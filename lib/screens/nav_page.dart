@@ -2,14 +2,14 @@ import 'package:developer_test/shared/exports.dart';
 import 'package:flutter/material.dart';
 
 class NavPage extends StatefulWidget {
-  const NavPage({super.key,});
+  const NavPage({super.key});
 
   @override
   State<NavPage> createState() => _NavPageState();
 }
 
 class _NavPageState extends State<NavPage> {
-  int _index = 0;//New
+  int _index = 0; //New
 
   void _onTapped(int index) {
     setState(() {
@@ -17,15 +17,17 @@ class _NavPageState extends State<NavPage> {
     });
   }
 
-  // static const List<Widget> _pages = <Widget>[
-  //   SettingsPage(),
-  //   ScreenTwo(),
-  //   ScreenThree(),
-  //   ScreenFour(),
-  // ];
+  static const List<Widget> _pages = <Widget>[
+    SettingsPage(),
+    ScreenTwo(),
+    ScreenThree(),
+    ScreenFour(),
+  ];
   @override
   Widget build(BuildContext context) {
-    return  BottomNavigationBar(
+    return Scaffold(
+      body: _pages.elementAt(_index),
+      bottomNavigationBar: BottomNavigationBar(
         elevation: 0,
         backgroundColor: Palette.white,
         iconSize: 25,
@@ -61,6 +63,7 @@ class _NavPageState extends State<NavPage> {
             label: 'Profile',
           ),
         ],
-      );
+      ),
+    );
   }
 }
