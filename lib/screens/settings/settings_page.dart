@@ -44,7 +44,7 @@ class SettingsPage extends StatelessWidget {
                   color: Colors.transparent,
                 ),
                 Container(
-                  height: height * 0.61,
+                  height: height * 0.522,
                   color: Palette.white,
                   child: Column(
                     children: [
@@ -101,6 +101,7 @@ class SettingsPage extends StatelessWidget {
             ),
           ],
         ),
+        bottomNavigationBar: NavPage(),
       ),
     );
   }

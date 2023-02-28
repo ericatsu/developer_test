@@ -1,6 +1,4 @@
-import 'package:developer_test/screens/settings/settings_page.dart';
-import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:developer_test/shared/exports.dart';
 
 void main() {
   runApp(const MyApp());

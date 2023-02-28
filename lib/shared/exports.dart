@@ -7,6 +7,12 @@ export 'package:developer_test/shared/constants.dart';
 
 //screens
 export 'package:developer_test/screens/settings/ecobank_settings.dart';
+export 'package:developer_test/screens/nav_page.dart';
+export 'package:developer_test/screens/settings/settings_page.dart';
+export 'package:developer_test/screens/screen_four.dart';
+export 'package:developer_test/screens/screen_three.dart';
+export 'package:developer_test/screens/screen_two.dart';
+
 
 //widgets
 export 'package:developer_test/screens/settings/widgets/bottom_widget.dart';

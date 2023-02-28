@@ -62,8 +62,6 @@ class _EcobankSettingsState extends State<EcobankSettings> {
                     ],
                   ),
                 ),
-                
-
                 Expanded(
                   child: SingleChildScrollView(
                     child: Column(
@@ -176,7 +174,6 @@ class _EcobankSettingsState extends State<EcobankSettings> {
                           height: height * 0.05,
                           color: Colors.transparent,
                         ),
-                
                         Container(
                           height: height * 0.146,
                           color: Palette.white,
@@ -210,8 +207,7 @@ class _EcobankSettingsState extends State<EcobankSettings> {
                             ),
                           ),
                         ),
-                
-                      Container(
+                        Container(
                           height: height * 0.018,
                           color: Colors.transparent,
                         ),
@@ -248,7 +244,6 @@ class _EcobankSettingsState extends State<EcobankSettings> {
                             ),
                           ),
                         ),
-
                         Container(
                           height: height * 0.05,
                           color: Colors.transparent,
@@ -276,11 +271,12 @@ class _EcobankSettingsState extends State<EcobankSettings> {
                       ],
                     ),
                   ),
-                )
+                ),
               ],
             ),
           ],
         ),
+        bottomNavigationBar: NavPage(),
       ),
     );
   }
