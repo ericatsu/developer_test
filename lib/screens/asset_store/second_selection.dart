@@ -18,12 +18,12 @@ class SecondSelection extends StatelessWidget {
           children: [
             StoreTop(
               btext: 'Next',
-              message: 'Home Icons are displayed on your Start Screen',
+              message: 'Add at least 2 SCREENS to finish up.',
               name: 'Kwame',
               number: '3 ICONS',
               bcolor: Colors.grey,
               nextbutton: NextButton(
-                bcolor: Colors.green,
+                bcolor: Colors.grey,
                 onpressed: () {},
               ),
             ),
