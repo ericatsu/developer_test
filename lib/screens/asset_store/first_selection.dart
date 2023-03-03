@@ -1,8 +1,22 @@
+import 'package:developer_test/screens/asset_store/widgets/next_button.dart';
 import 'package:developer_test/shared/exports.dart';
 import 'package:flutter/material.dart';
 
-class FirstSelection extends StatelessWidget {
+class FirstSelection extends StatefulWidget {
   const FirstSelection({super.key});
+
+  @override
+  State<FirstSelection> createState() => _FirstSelectionState();
+}
+
+class _FirstSelectionState extends State<FirstSelection> {
+  final List<Data> _selectedData = [];
+
+  void _onPressed(Data data) {
+    setState(() {
+      _selectedData.add(data);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -15,15 +29,28 @@ class FirstSelection extends StatelessWidget {
         child: Column(
           children: [
             StoreTop(
-              btext: 'Next',
-              message: 'Home Icons are displayed on your Start Screen.',
-              name: 'Kwame',
-              number: '3 ICONS',
-              bcolor: Colors.grey,
-              onpressed: () {
-                Get.to(const SecondSelection());
-              },
-            ),
+                btext: 'Next',
+                message: 'Home Icons are displayed on your Start Screen.',
+                name: 'Kwame',
+                number: '3 ICONS',
+                bcolor: Colors.grey,
+                nextbutton: _selectedData.length < 3
+                    ? NextButton(
+                        bcolor: Colors.grey,
+                        onpressed: () {},
+                      )
+                    : NextButton(
+                        bcolor: Colors.green,
+                        onpressed: () {
+                          Navigator.push(
+                            context,
+                            MaterialPageRoute(
+                              builder: (context) =>
+                                  SecondSelection(data: _selectedData),
+                            ),
+                          );
+                        },
+                      )),
             SingleChildScrollView(
               child: SizedBox(
                 height: height * 0.75,
@@ -32,7 +59,9 @@ class FirstSelection extends StatelessWidget {
                   itemBuilder: (BuildContext context, int index) {
                     return IconWidget(
                       data: data[index],
-                      onpressed: () {},
+                      onpressed: () {
+                        _onPressed(data[index]);
+                      },
                     );
                   },
                 ),
