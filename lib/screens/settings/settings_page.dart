@@ -25,7 +25,7 @@ class SettingsPage extends StatelessWidget {
                   color: Colors.transparent,
                 ),
                 Container(
-                  height: height * 0.10,
+                  height: height * 0.08,
                   color: Palette.white,
                   child: const SettingTile(
                     title: 'Creator Studio',
