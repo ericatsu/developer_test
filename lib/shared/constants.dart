@@ -6,3 +6,9 @@ class Palette {
   static const Color white= Colors.white;
   static const Color black= Colors.black;
 }
+
+class Images {
+  static const String imagesPath = 'assets/images/';
+  static const String pmi= '${imagesPath}pmi.png';
+  static const String rose = '${imagesPath}rose.png';
+}
