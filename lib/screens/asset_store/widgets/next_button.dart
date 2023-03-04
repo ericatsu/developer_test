@@ -25,7 +25,7 @@ class NextButton extends StatelessWidget {
       ),
       child:  Text(
         btext,
-        style: TextStyle(fontSize: 11, color: Palette.black),
+        style: const TextStyle(fontSize: 11, color: Palette.black),
       ),
     );
   }
