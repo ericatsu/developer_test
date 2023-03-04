@@ -6,16 +6,15 @@ class StoreTop extends StatelessWidget {
   final String number;
   final String message;
   final String btext;
-  final Color bcolor;
   final Widget nextbutton;
-  //final VoidCallback onpressed;
-  const StoreTop(
-      {super.key,
-      required this.name,
-      required this.number,
-      required this.btext,
-      required this.message,
-      required this.bcolor, required this.nextbutton, });
+  const StoreTop({
+    super.key,
+    required this.name,
+    required this.number,
+    required this.btext,
+    required this.message,
+    required this.nextbutton,
+  });
 
   @override
   Widget build(BuildContext context) {
@@ -32,7 +31,7 @@ class StoreTop extends StatelessWidget {
             height: height * 0.02,
           ),
           Text(
-            'Welcome, $name!',
+            name,
             style: const TextStyle(
                 fontSize: 18,
                 fontWeight: FontWeight.w500,
@@ -64,18 +63,6 @@ class StoreTop extends StatelessWidget {
           Container(
             child: nextbutton,
           ),
-          // TextButton(
-          //   onPressed: onpressed,
-          //   style: TextButton.styleFrom(
-          //       backgroundColor: bcolor,
-          //       shape: const BeveledRectangleBorder(
-          //           borderRadius: BorderRadius.all(Radius.circular(2))),
-          //       minimumSize: Size(width * 0.18, height * 0.03)),
-          //   child: Text(
-          //     btext,
-          //     style: const TextStyle(color: Colors.white70),
-          //   ),
-          // )
         ],
       ),
     );

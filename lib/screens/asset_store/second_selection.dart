@@ -1,10 +1,23 @@
-import 'package:developer_test/screens/asset_store/widgets/next_button.dart';
+import 'package:developer_test/screens/asset_store/third_page.dart';
 import 'package:developer_test/shared/exports.dart';
 import 'package:flutter/material.dart';
 
-class SecondSelection extends StatelessWidget {
+class SecondSelection extends StatefulWidget {
   final List<Data> data;
   const SecondSelection({super.key, required this.data});
+
+  @override
+  State<SecondSelection> createState() => _SecondSelectionState();
+}
+
+class _SecondSelectionState extends State<SecondSelection> {
+  final List<Data> _selectedData = [];
+
+  void _onPressed(Data data) {
+    setState(() {
+      _selectedData.add(data);
+    });
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -19,24 +32,32 @@ class SecondSelection extends StatelessWidget {
             StoreTop(
               btext: 'Next',
               message: 'Add at least 2 SCREENS to finish up.',
-              name: 'Kwame',
-              number: '3 ICONS',
-              bcolor: Colors.grey,
-              nextbutton: NextButton(
-                bcolor: Colors.grey,
-                onpressed: () {},
-              ),
+              name: 'Great!',
+              number: '2 ICONS',
+              nextbutton: _selectedData.length < 2
+                  ? NextButton(
+                      bcolor: Colors.grey,
+                      onpressed: () {},
+                      btext: 'Next',
+                    )
+                  : NextButton(
+                      btext: 'Next',
+                      bcolor: Colors.green,
+                      onpressed: () {
+                        Get.to(() => ThirdPage(data: _selectedData));
+                      },
+                    ),
             ),
             SingleChildScrollView(
               child: SizedBox(
                 height: height * 0.75,
                 child: ListView.builder(
-                  itemCount: data.length,
+                  itemCount: widget.data.length,
                   itemBuilder: (BuildContext context, int index) {
                     return IconWidget(
-                      data: data[index],
+                      data: widget.data[index],
                       onpressed: () {
-                        Navigator.pop(context, data);
+                        _onPressed(data[index]);
                       },
                     );
                   },

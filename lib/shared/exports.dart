@@ -24,7 +24,9 @@ export 'package:developer_test/screens/settings/widgets/bottom_widget.dart';
 export 'package:developer_test/screens/settings/widgets/toggle_switch.dart';
 export 'package:developer_test/screens/settings/widgets/setting_tile.dart';
 export 'package:developer_test/screens/settings/widgets/top_widget.dart';
+export 'package:developer_test/screens/asset_store/widgets/next_button.dart';
 
+//Screens
 export 'package:developer_test/screens/asset_store/widgets/store_top.dart';
 export 'package:developer_test/screens/asset_store/widgets/icon_widget.dart';
 

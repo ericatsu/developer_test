@@ -1,4 +1,3 @@
-import 'package:developer_test/screens/asset_store/widgets/next_button.dart';
 import 'package:developer_test/shared/exports.dart';
 import 'package:flutter/material.dart';
 
@@ -29,28 +28,24 @@ class _FirstSelectionState extends State<FirstSelection> {
         child: Column(
           children: [
             StoreTop(
-                btext: 'Next',
-                message: 'Home Icons are displayed on your Start Screen.',
-                name: 'Kwame',
-                number: '3 ICONS',
-                bcolor: Colors.grey,
-                nextbutton: _selectedData.length < 3
-                    ? NextButton(
-                        bcolor: Colors.grey,
-                        onpressed: () {},
-                      )
-                    : NextButton(
-                        bcolor: Colors.green,
-                        onpressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(
-                              builder: (context) =>
-                                  SecondSelection(data: _selectedData),
-                            ),
-                          );
-                        },
-                      )),
+              btext: 'Next',
+              message: 'Home Icons are displayed on your Start Screen.',
+              name: 'Welcome, Kwame!',
+              number: '3 ICONS',
+              nextbutton: _selectedData.length < 3
+                  ? NextButton(
+                      btext: 'Next',
+                      bcolor: Colors.grey,
+                      onpressed: () {},
+                    )
+                  : NextButton(
+                      btext: 'Next',
+                      bcolor: Colors.green,
+                      onpressed: () {
+                        Get.to(() => SecondSelection(data: _selectedData));
+                      },
+                    ),
+            ),
             SingleChildScrollView(
               child: SizedBox(
                 height: height * 0.75,
