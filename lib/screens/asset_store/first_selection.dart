@@ -48,7 +48,7 @@ class _FirstSelectionState extends State<FirstSelection> {
             ),
             SingleChildScrollView(
               child: SizedBox(
-                height: height * 0.75,
+                height: height * 0.66,
                 child: ListView.builder(
                   itemCount: data.length,
                   itemBuilder: (BuildContext context, int index) {

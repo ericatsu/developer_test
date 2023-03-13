@@ -20,7 +20,6 @@ class _SearchPageState extends State<SearchPage> {
           height: height,
           width: width,
           color: Colors.white,
-          
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.center,
             children: [
@@ -60,7 +59,9 @@ class _SearchPageState extends State<SearchPage> {
               ),
               popularORnewButtons(),
               Expanded(
-                child: SingleChildScrollView(child: popularORnew()),
+                child: SingleChildScrollView(
+                  child: popularORnew(),
+                ),
               ),
             ],
           ),
@@ -79,33 +80,29 @@ class _SearchPageState extends State<SearchPage> {
 
   Widget popularORnewButtons() {
     return SizedBox(
-      height: 45,
+      height: 40,
       child: Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           TextButtons(
             btext: 'Popular',
-            bcolor:
-                projectType == 'popular' ? Palette.black : Colors.grey,
+            bcolor: projectType == 'popular' ? Palette.black : Colors.grey,
             onTap: () {
               setState(() {
                 projectType = 'popular';
               });
             },
             textcolor: projectType == 'popular' ? Palette.black : Colors.grey,
-            
           ),
           TextButtons(
             btext: 'New Projects',
-            bcolor:
-                projectType == 'new' ? Palette.black : Colors.grey,
+            bcolor: projectType == 'new' ? Palette.black : Colors.grey,
             onTap: () {
               setState(() {
                 projectType = 'new';
               });
             },
-            textcolor: projectType == 'new' ? Palette.black  : Colors.grey ,
-            
+            textcolor: projectType == 'new' ? Palette.black : Colors.grey,
           ),
         ],
       ),

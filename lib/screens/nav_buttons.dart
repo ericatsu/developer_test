@@ -19,7 +19,7 @@ class _NavButtonsState extends State<NavButtons> {
 
   static const List<Widget> _pages = <Widget>[
     SettingsPage(),
-    ScreenTwo(),
+    FirstSelection(),
     SearchPage(),
     ScreenFour(),
   ];

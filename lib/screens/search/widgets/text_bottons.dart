@@ -32,7 +32,7 @@ class TextButtons extends StatelessWidget {
             ),
           ),
           Container(
-            margin: const EdgeInsets.only(top: 8.0),
+            margin: const EdgeInsets.only(top: 12.0,),
             height: 1.5,
             width: width * 0.5,
             color: bcolor,
