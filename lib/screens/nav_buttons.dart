@@ -1,14 +1,14 @@
 import 'package:developer_test/shared/exports.dart';
 import 'package:flutter/material.dart';
 
-class NavPage extends StatefulWidget {
-  const NavPage({super.key});
+class NavButtons extends StatefulWidget {
+  const NavButtons({super.key});
 
   @override
-  State<NavPage> createState() => _NavPageState();
+  State<NavButtons> createState() => _NavButtonsState();
 }
 
-class _NavPageState extends State<NavPage> {
+class _NavButtonsState extends State<NavButtons> {
   int _index = 0; //New
 
   void _onTapped(int index) {
@@ -20,7 +20,7 @@ class _NavPageState extends State<NavPage> {
   static const List<Widget> _pages = <Widget>[
     SettingsPage(),
     ScreenTwo(),
-    ScreenThree(),
+    SearchPage(),
     ScreenFour(),
   ];
   @override

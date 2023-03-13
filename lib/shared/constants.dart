@@ -11,4 +11,5 @@ class Images {
   static const String imagesPath = 'assets/images/';
   static const String pmi= '${imagesPath}pmi.png';
   static const String rose = '${imagesPath}rose.png';
+  static const String category = '${imagesPath}category.png';
 }
